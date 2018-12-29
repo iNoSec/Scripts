@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo /etc/init.d/php7.3-fpm start;
+sleep 1;
+sudo service nginx start;
+
+read -p "Openning phpinfo for testing [Y/n]" test
+case $test in
+    [Yy]* ) google-chrome http://127.0.0.1/phpinfo.php ;; 
+    [Nn]* ) exit;;
+    * ) google-chrome http://127.0.0.1/phpinfo.php ;; 
+esac 

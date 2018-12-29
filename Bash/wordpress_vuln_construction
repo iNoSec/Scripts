@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo docker kill vulnerablewordpress 
+#sudo docker rm vulnerablewordpress
+sudo docker pull wpscanteam/vulnerablewordpress
+#sudo docker build --rm -t wpscan/vulnerablewordpress .
+sudo docker run --name=vulnerablewordpress -d -p 80:80 -p 3306:3306 wpscan/vulnerablewordpress & 
+#docker exec -i -t vulnerablewordpress bash
+echo "Wordpress loading... please wait!!"
+sleep 10
+google-chrome http://192.168.1.58 & 

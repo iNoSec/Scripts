@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo ifconfig vmnet2 up && figlet -kc "VMnet2 is UP"
+ip addr | grep UP | cut -f2 -d":"

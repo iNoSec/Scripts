@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo ifconfig vmnet1 up
+sudo ifconfig vmnet2 up
+sudo ifconfig vmnet8 up
+figlet -kc "VMware network up"
+echo "Active interfaces are :"
+echo "-----------------------"
+ip addr | grep UP | cut -f2 -d":" 

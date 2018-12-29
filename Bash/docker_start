@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo service docker start
+sudo ifconfig docker0 up
+sudo ifconfig br-1704d20293fe up
+figlet -kc "DOCKER network"
+figlet -kc "is UP!!"
+echo "Active interfaces are :"
+echo "-----------------------"
+ip addr | grep UP | cut -f2 -d":" 

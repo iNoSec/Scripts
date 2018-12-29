@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo ifconfig docker0 down
+sudo ifconfig br-1704d20293fe down
+figlet -kc "DOCKER network"
+figlet -kc "is DOWN!!"
+echo "Active interfaces are :"
+echo "-----------------------"
+ip addr | grep UP | cut -f2 -d":" 

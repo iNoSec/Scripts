@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ ! $1 ];then
+    sudo docker start vulnerablewordpress && sudo docker attach vulnerablewordpress &
+    google-chrome http://192.168.1.58 2>/dev/null 1>/dev/null &
+    echo "Wordpress will start in 2 minutes..."
+elif [ $1 == stop ];then
+    sudo docker stop vulnerablewordpress
+    echo "Wordpress container has stop"
+else
+    echo "To stop this container type vulnerablewordpress stop"
+fi
+

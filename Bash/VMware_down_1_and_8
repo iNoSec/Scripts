@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo ifconfig vmnet8 down
+sudo ifconfig vmnet1 down
+figlet -kc "VMNET1 and VMNET8 are down"
+echo "Active interfaces are :"
+echo "-----------------------"
+ip addr | grep UP | cut -f2 -d":"

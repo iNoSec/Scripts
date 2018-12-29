@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ ! $1 ];then
+    sudo docker run --name=heartbleed -d andrewmichaelsmith/docker-heartbleed &
+    echo "L'adresse ip est 172.17.0.2" 
+elif [ $1 == stop ];then 
+    sudo docker stop heartbleed && sudo docker rm heartbleed
+    echo "container has been deleted"
+elif [ $1 == bash ];then
+    sudo docker -ti heartbleed bash
+    else
+            echo "To stop this container type heartbleed stop"
+        fi
+

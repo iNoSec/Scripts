@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo docker kill webgoat
+#sudo docker rm webgoat
+sudo docker pull danmx/docker-owasp-webgoat
+google-chrome http://192.168.1.58:8090/WebGoat/attack && sudo docker run -p 8090:8080 --name webgoat -it danmx/docker-owasp-webgoat &

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo ifconfig vmnet2 down && figlet -kc "VMnet2 is DOWN"
+ip addr | grep UP | cut -f2 -d":"

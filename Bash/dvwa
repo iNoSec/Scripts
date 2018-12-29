@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ ! $1 ];then
+sudo docker start dvwa && sudo docker attach dvwa &
+google-chrome http://192.168.1.58:8080 2>/dev/null 1>/dev/null &
+elif [ $1 == stop ];then 
+    sudo docker stop dvwa
+else
+    echo "To stop this container type dvwa stop"
+fi

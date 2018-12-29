@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo docker stop Spiderfoot && echo "SpiderFoot container has stop"
+
+

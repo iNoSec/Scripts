@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo a2disconf php5.6-fpm
+sudo a2enconf php7.3-fpm
+sudo a2enmod php7.2
+systemctl reload apache2

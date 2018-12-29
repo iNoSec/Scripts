@@ -1,0 +1,5 @@
+#!/bin/bash
+#Pour activer php 5.6 il suffit de ça... Moi qui ai cherché midi a 14h LOL
+sudo a2enmod proxy_fcgi setenvif
+sudo a2enconf php5.6-fpm
+systemctl reload apache2

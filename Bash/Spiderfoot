@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo docker start Spiderfoot && sudo docker attach Spiderfoot 1>/dev/null 2>/dev/null & 
+sudo python /pentest/intelligence-gathering/spiderfoot/sfcli.py -s http://127.0.0.1:5009
